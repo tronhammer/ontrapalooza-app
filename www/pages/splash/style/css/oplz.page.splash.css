@@ -1,0 +1,93 @@
+#page-container-splash .oplz-splash-navbar-container{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+
+#page-container-splash .oplz-splash-navbar .oplz-splash-navbar-header{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.oplz-splash-option-container{
+	width: 75px;
+	height: 100px;
+}
+
+.oplz-splash-option-container .oplz-splash-option-tile-icon{
+	margin: 0px auto;
+	height: 75px;
+	width: 75px;
+}
+
+.oplz-splash-option-container .oplz-splash-option-tile-name{
+	text-align: center;
+	width: auto;
+}
+
+.container-fluid:first{
+	margin-top: 100px;
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.oplz-splash-option-container{
+		width: 175px;
+		height: 200px;
+	}
+
+	.oplz-splash-option-container .oplz-splash-option-tile-icon{
+		margin: 0px auto;
+		height: 200px;
+		width: 200px;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.oplz-splash-option-container{
+		width: 175px;
+		height: 200px;
+	}
+
+	.oplz-splash-option-container .oplz-splash-option-tile-icon{
+		margin: 0px auto;
+		height: 185px;
+		width: 185px;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.oplz-splash-option-container{
+		width: 100px;
+		height: 125px;
+	}
+
+	.oplz-splash-option-container .oplz-splash-option-tile-icon{
+		margin: 0px auto;
+		height: 85px;
+		width: 85px;
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	.oplz-splash-option-container{
+		width: 100px;
+		height: 125px;
+	}
+
+	.oplz-splash-option-container .oplz-splash-option-tile-icon{
+		margin: 0px auto;
+		height: 85px;
+		width: 85px;
+	}
+}

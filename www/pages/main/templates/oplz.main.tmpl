@@ -1,0 +1,51 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span style="color: white;font-weight:bold;">ONTRA</span><span style="color: deepskyblue;font-weight:bold;">PALOOZA</span></a>
+    </div>
+      <form class="navbar-form navbar-right" role="form" id="opz-login-form" onsubmit="window.login(this); return false;">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control" id="opz-login-username">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" id="opz-login-password">
+        </div>
+        <button type="submit" class="btn btn-success" id="opz-login-submit">Sign in</button>
+      </form>
+      <div class="opz-welcome-container hide">
+        <span class="opz-welcome-text">Welcome:</span> <span class="opz-welcome-username">User</span>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <!-- Menu -->
+    <div class="col-md-3 opz-main-menu">
+      <div class="opz-main-menu-item selected" data-goto="home">Home</div>
+      <div class="opz-main-menu-item hide" data-goto="schedule">Schedule</div>
+      <div class="opz-main-menu-item hide" data-goto="myschedule">My Schedule</div>
+      <div class="opz-main-menu-item" data-goto="message">Messages</div>
+      <div class="opz-main-menu-item" data-goto="attendees">Attendees</div>
+      <div class="opz-main-menu-item" data-goto="buytickets">Buy Tickets</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-6 opz-main-column"></div>
+
+    <!-- Right side bar -->
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+
+<div class="navbar-collapse collapse">
+
+</div><!--/.navbar-collapse -->
