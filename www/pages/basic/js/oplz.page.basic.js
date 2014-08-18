@@ -30,12 +30,6 @@ $(function(){
 
 					page.getData(function (data){
 						page.bind();
-
-						page.scheduleRenderData();
-
-						page.miniMenuRenderData();
-
-						page.recentSpeakersRenderData();
 					});
 
 					window.oplz.common.route.loaded(); // todo: turn into a call to an event listener for loaded
