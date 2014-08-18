@@ -85,6 +85,12 @@ $(function () {
 
 					_this.miniMenuSelectDay();
 				})
+				.delegate(".oplz-myschedule-timeslot-event", "click", function(){
+					var id = window.oplz.events.keys[ $(this).data("eventkey") ];
+					var params = oplz.common.route.getParams();
+
+					location.hash = "#!event?event=" +id+"&sessid="+params["sessid"];
+				})
 		},
 
 		"selectAttendingEvents": function(){
@@ -224,7 +230,7 @@ $(function () {
 			var $recentSpeakersContainer = this.template.find(".oplz-myschedule-recent-speakers-container");
 			var recentSpeakersHTML = "";
 
-			for(username in storage){
+			for(var username in storage){
 				var user = window.oplz.common.users.get(window.oplz.users.usernames[ username ]); 
 
 				recentSpeakersHTML += window.oplz.common.pages.parse( this, this.templates["recentSpeaker"], {
