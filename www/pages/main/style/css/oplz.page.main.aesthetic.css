@@ -1,0 +1,56 @@
+/**
+ * @todo Change this into a less file that includes all other files. Break media queries into respective files. 
+ * Partition css into aesthetic and layout based css, and secure the layout css in media queries
+ */
+
+#oplz-main-content-container .jumbotron{
+	background: white;
+}
+
+#oplz-main-content-container .jumbotron h1, #oplz-main-content-container .jumbotron h2{
+	color: deepskyblue;
+	text-transform: uppercase;
+}
+
+#oplz-main-content-container .oplz-splash-header-number{
+	background: white;
+}
+
+#oplz-main-content-container .oplz-splash-left-number{
+	border-color: deepskyblue;
+	border-style: solid;
+	color: red;
+	text-align: center;
+}
+
+
+#oplz-main-content-container .oplz-splash-left-number-top-bar, 
+#oplz-main-content-container .oplz-splash-left-number-bottom-bar, 
+#oplz-main-content-container .oplz-splash-left-number-full-bar{
+	background: rgba(0,0,0, 0.1);
+}
+
+#oplz-main-content-container .oplz-splash-right-image{
+	background-image: url("/pages/main/style/images/party.jpg") 100%;
+}
+
+#oplz-main-content-container .oplz-main-schedule-tab{
+	text-align: center;
+}
+
+#oplz-main-content-container .oplz-main-schedule-tab-sub-type{
+	text-align: center;
+}
+
+#oplz-main-content-container .oplz-main-event-speaker-user-container{
+	background-image: url(/pages/main/style/images/unkownUser.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	border-radius: 60px;
+	box-shadow: 0px 0px 20px -5px #999;
+}
+
+#oplz-main-content-container .oplz-main-timeslot-event.selected{
+	background-color: green;
+}

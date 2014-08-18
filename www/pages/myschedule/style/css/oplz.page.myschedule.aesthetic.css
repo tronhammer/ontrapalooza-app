@@ -1,0 +1,12 @@
+/**
+ * @todo Change this into a less file that includes all other files. Break media queries into respective files. 
+ * Partition css into aesthetic and layout based css, and secure the layout css in media queries
+ */
+
+#oplz-myschedule-content-container .jumbotron{
+	background: white;
+}
+
+#oplz-myschedule-content-container .oplz-myschedule-timeslot-event.selected{
+	background-color: green;
+}

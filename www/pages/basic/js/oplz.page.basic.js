@@ -9,7 +9,7 @@ $(function(){
 			"css": "pages/splash/style/css"
 		},
 		"render": function(data){
-			var page = window.oplz.common.pages.getCurrent();
+			var page = this;
 
 			if (!page.template){
 				$.get( page.paths.templates + "/oplz.splash.tmpl").done(function(tmpl){
@@ -26,6 +26,18 @@ $(function(){
 				window.oplz.common.pages.display( page );
 			}
 		},
+		"adjustToDevice": function(){
+			switch (window.oplz.common.screen.detect()){
+				case window.oplz.common.screen.size.desktop:
+				case window.oplz.common.screen.size.bigTable:
+				case window.oplz.common.screen.size.smallTablet:
+				case window.oplz.common.screen.size.bigPhone:
+				case window.oplz.common.screen.size.smallPhone:
+
+			}
+			if (window.oplz.common.screen.detect("bigPhone", ">")){
+			}
+		},
 		"bind": function(){
 			$("#page-container-splash").delegate(".oplz-splash-option-container", "click", function(){
 				location.hash = "#!" + $(this).data("gotopage");
@@ -35,5 +47,3 @@ $(function(){
 
 	SplashPage.render();
 });
-
-//# sourceURL=/pages/splash/js/oplz.page.splash.js

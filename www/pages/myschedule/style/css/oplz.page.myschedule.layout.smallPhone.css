@@ -1,0 +1,10 @@
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	#oplz-main-content-container .oplz-splash-left-number{
+		border-width:  2px;
+		border-radius: 15px;
+		font-size: 15px;
+		height: 20px;
+		width: 20px;
+	}
+}

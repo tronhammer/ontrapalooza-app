@@ -1,0 +1,11 @@
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.oplz-splash-left-number{
+		border-width:  2px;
+		border-radius: 45px;
+		font-size: 32px;
+		height: 60px;
+		width: 60px;
+	}
+}

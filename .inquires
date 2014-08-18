@@ -1,0 +1,5 @@
+## Questions
+
+ - What DOES the server environment look like
+ - What is the PHP version
+ - Is memcached available (including php module)

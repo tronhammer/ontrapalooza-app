@@ -1,0 +1,93 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand pull-left" href="#"><span style="color: white;font-weight:bold;">ONTRA</span><span style="color: deepskyblue;font-weight:bold;">PALOOZA</span></a>
+		</div>
+
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">get tickets</a></li>
+				<li><a href="#about">speakers</a></li>
+				<li><a href="#contact">schedule</a></li>
+				<li><a href="#contact">connect</a></li>
+				<li><a href="#contact">santa barbara</a></li>
+				<li><a href="#contact">sponsorship</a></li>
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">my palooza <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu"> 
+            <form class="navbar-form" role="form" id="opz-login-form" onsubmit="window.oplz.common.login(this); return false;">
+  						<li class="dropdown-header">scroll down see more...</li>
+  						<li>
+								<input type="text" placeholder="Email" class="form-control" id="opz-login-username">
+              </li>
+              <li>
+								<input type="password" placeholder="Password" class="form-control" id="opz-login-password">
+  						</li>
+              <li class="divider"></li>
+              <li>
+                <button type="submit" class="btn btn-success" id="opz-login-submit">Sign in</button>
+              </li>
+            </form>
+          </ul>
+
+          <ul class="hide">
+            <li>
+              <div class="opz-welcome-container pull-right hide">
+                <span class="opz-welcome-text">Welcome:</span> <span class="opz-welcome-username">User</span>
+              </div>
+            </li>
+          </ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid" id="oplz-splash-content-container">
+
+  <div class="jumbotron row">
+    <div class="col-xs-1 oplz-main-left-number-container">
+      <div class="oplz-splash-left-number-top-bar"></div>
+      <div class="oplz-splash-left-number">
+        <span>4</span>
+      </div>
+      <div class="oplz-splash-left-number-full-bar"></div>
+    </div>
+
+    <div class="col-xs-10 oplz-main-header-content-container">
+      <div class="container-fluid">
+        <div class="row">
+          <h1>{{header1top}}</h1>
+          <h1>{{header1bottom}}</h1>
+          <h2>{{header2}}</h2>
+
+          <p>{{mainIntroText}}</p>
+        </div>
+
+        <div class="row oplz-main-schedule-tabs-container">
+          <div class="oplz-main-schedule-tab">wednesday</div>
+          <div class="oplz-main-schedule-tab">thursday</div>
+          <div class="oplz-main-schedule-tab">friday</div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-1 oplz-main-schedule-tab-sub-type"></div>
+          <div class="col-xs-2 oplz-main-schedule-tab-sub-type">schedule</div>
+          <div class="col-md-2 oplz-main-schedule-tab-sub-type">speakers</div>
+          <div class="col-xs-2 oplz-main-schedule-tab-sub-type">sponsers</div>
+          <div class="col-xs-2 oplz-main-schedule-tab-sub-type">exhibitors</div>
+          <div class="col-xs-2 oplz-main-schedule-tab-sub-type">attendies</div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</div>

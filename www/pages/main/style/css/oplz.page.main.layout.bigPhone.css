@@ -1,0 +1,26 @@
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	#oplz-main-content-container .oplz-splash-left-number{
+		border-width:  2px;
+		border-radius: 15px;
+		font-size: 15px;
+		height: 20px;
+		width: 20px;
+	}
+
+	#oplz-main-content-container .oplz-splash-left-number-top-bar{
+		margin-left: 8px;
+	}
+
+	#oplz-main-content-container .oplz-splash-left-number-full-bar{
+		margin-left: 8px;
+		height: 720px;
+	}
+
+	#oplz-main-content-container .oplz-splash-left-number span{
+		font-weight: 900;
+		position: relative;
+		top: -3px;
+		left: -1px;
+	}
+}
