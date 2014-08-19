@@ -317,7 +317,7 @@ window.oplz.common = {
 		"_builtIn": {
 			"data": {
 				"uri": {
-					"base": "http://api.ontrapalooza.com/",
+					"base": "http://api."+location.hostname+"/",
 					"cache": "cache/"
 				}
 			},

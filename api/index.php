@@ -1,6 +1,9 @@
 <?php
-
-	header("Access-Control-Allow-Origin: http://ontrapalooza.com");
+	
+	/**
+	 * @todo  Change HTTP_REFERER to be a specific access domain
+	 */
+	header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_REFERER"]);
 	header("Access-Control-Allow-Credentials: true");
 
 	session_start();
