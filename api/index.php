@@ -2,6 +2,7 @@
 	
 	/**
 	 * @todo  Change HTTP_REFERER to be a specific access domain
+	 *        ie: http://ontrapalooa.com
 	 */
 	header("Access-Control-Allow-Origin: " . rtrim($_SERVER["HTTP_REFERER"], "/"));
 	header("Access-Control-Allow-Credentials: true");

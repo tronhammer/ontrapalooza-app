@@ -1,12 +1,12 @@
 $(function(){
-	var SplashPage = window.oplz.common.pages.load("splash", {
-		"name": "splash",
+	var BasicPage = window.oplz.common.pages.load("basic", {
+		"name": "basic",
 		"active": true,
 		"template": undefined,
 		"paths": {
-			"templates": "pages/splash/templates",
-			"js": "pages/splash/js",
-			"css": "pages/splash/style/css"
+			"templates": "pages/basic/templates",
+			"js": "pages/basic/js",
+			"css": "pages/basic/style/css"
 		},
 		"templateData": {
 		},
@@ -20,7 +20,7 @@ $(function(){
 				/**
 				 * @todo Change uri to dynamically select template based on screen.
 				 */
-				$.get( page.paths.templates + "/oplz.myschedule."+window.oplz.common.screen.current+".tmpl").done(function (tmpl){
+				$.get( page.paths.templates + "/oplz.basice."+window.oplz.common.screen.current+".tmpl").done(function (tmpl){
 					page.templateString = tmpl;
 					page.template = window.oplz.common.pages.build(page, tmpl);
 
@@ -57,9 +57,9 @@ $(function(){
 		},
 
 		"bind": function(){
-			// $("#page-container-splash").delegate("", "click", function(){});
+			// $("#page-container-basic").delegate("", "click", function(){});
 		}
 	});
 
-	SplashPage.render();
+	BasicPage.render();
 });

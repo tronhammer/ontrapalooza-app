@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"curr",
+				"currentEventID"
+			],
+			[
+				"rec",
+				"recentSpeakersHTML"
+			],
+			[
+				"mini",
+				"miniMenuSelectDay"
+			],
+			[
+				"even",
+				"eventIDs"
+			],
+			[
+				"eve",
+				"eventIDs"
+			],
+			[
+				"day",
+				"dayOfWeek"
+			],
+			[
+				"current",
+				"currentAPI"
+			],
+			[
+				"var",
+				"var_export"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
 				"us",
 				"usersGoing"
 			],
@@ -32,50 +68,53 @@
 	"buffers":
 	[
 		{
-			"file": "www/index.html",
+			"file": "www/app/js/oplz.app.js",
 			"settings":
 			{
-				"buffer_size": 1236,
+				"buffer_size": 15091,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ontrapalooza.sublime-project",
+			"file": "www/pages/event/js/oplz.page.event.js",
 			"settings":
 			{
-				"buffer_size": 256,
+				"buffer_size": 1994,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/pages/main/templates/oplz.main.desktop.tmpl",
+			"file": "www/pages/signup/templates/oplz.signup.desktop.tmpl",
 			"settings":
 			{
-				"buffer_size": 4805,
+				"buffer_size": 1727,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/pages/main/style/css/oplz.page.main.aesthetic.css",
+			"file": "/home/pcm/base-ubuntu-12.04-install.sh",
 			"settings":
 			{
-				"buffer_size": 1453,
+				"buffer_size": 3607,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/pages/main/style/css/oplz.page.main.layout.desktop.css",
+			"contents": "#!/bin/bash\n\nsudo apt-get update\n\nsudo apt-get upgrade\n\nsudo apt-get install curl mcrypt libmcrypt4 bcrypt memcached \\\n	mysql-client imagemagick php5 php5-suhosin php5-mysql php5-curl \\\n	php5-memcached php5-imagick php-crypt-blowfish php5-mcrypt phpunit \\\n	mongodb apache2 nginx npm python-pip libmono-2.0-1 openjdk-6-jre \\\n	openjdk-6-jdk icedtea6-plugin ia32-libs\n\nsudo apt-get install rkhunter ansible puppet ufw p7zip-full vim\n\nnpm install -g yo gulp brunch grunt request express mocha mongoose \\\n	bower mongodb uglify-js mysql forever grunt-cli less\n\n\ncd ~\nmkdir installer-files\ncd ./installer-files\n\n# # install latest ruby\nwget http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz\n\nif [ \"$(md5sum ruby-2.1.2.tar.gz | xargs)\" = \"a5b5c83565f8bd954ee522bd287d2ca1 ruby-2.1.2.tar.gz\" ]\nthen\n	tar -xf ruby-2.1.2.tar.gz ruby-2.1.2\n	cd ./ruby-2.1.2\n\n	./configure\n	make\n	sudo make install\n\n	gem install jekyll\nfi\n\ncd ~/installer-files\n\nwget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz\nif [ \"$(md5sum node-v0.10.29.tar.gz | xargs)\" = \"0d5dc62090404f7c903f29779295758935529242 node-v0.10.29.tar.gz\" ]\nthen\n	tar -xf node-v0.10.29.tar.gz node-v0.10.29\n	cd ./node-v0.10.29\n\n	./configure\n	make\n	sudo make install\nfi\n\ncd ~/installer-files\n\nwget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz\n# if [ \"$(md5sum) Python-2.7.8.tgz | xargs\" = \"a5b5c83565f8bd954ee522bd287d2ca1 Python-2.7.8.tgz\" ]\n# then\n	tar -xf Python-2.7.8.tgz Python-2.7.8\n	cd ./Python-2.7.8\n\n	sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev\n	\n	./configure\n	make\n	sudo make altinstall\n# fi\n\ncd ~/installer-files\n\nwget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tgz\ntar -xf Python-3.4.1.tgz Python-3.4.1\ncd ./Python-3.4.1\n\n./configure\nmake\nsudo make altinstall\n\ncd ~/installer-files\n\nsudo apt-get install git-core cmake g++ libmysqlclient-dev \\\n  libxml2-dev libmcrypt-dev libicu-dev openssl build-essential binutils-dev \\\n  libcap-dev libgd2-xpm-dev zlib1g-dev libtbb-dev libonig-dev libpcre3-dev \\\n  autoconf automake libtool libcurl4-openssl-dev \\\n  wget memcached libreadline-dev libncurses-dev libmemcached-dev libbz2-dev \\\n  libc-client2007e-dev php5-mcrypt php5-imagick libgoogle-perftools-dev \\\n  libcloog-ppl0 libelf-dev libdwarf-dev subversion python-software-properties \\\n  libmagickwand-dev libxslt1-dev ocaml-native-compilers libevent-dev\n\nsudo add-apt-repository ppa:mapnik/boost\nsudo apt-get update\nsudo apt-get install libboost1.49-dev libboost-regex1.49-dev \\\n  libboost-system1.49-dev libboost-program-options1.49-dev \\\n  libboost-filesystem1.49-dev libboost-thread1.49-dev\n\n mkdir dev\ncd dev\ngit clone git://github.com/facebook/hhvm.git\ncd hhvm\ngit submodule update --init --recursive\nexport CMAKE_PREFIX_PATH=`pwd`/..\ncd ..\n\nsvn checkout http://google-glog.googlecode.com/svn/trunk/ google-glog\ncd google-glog\n./configure --prefix=$CMAKE_PREFIX_PATH\nmake\nsudo make install\ncd ..\n\nwget http://www.canonware.com/download/jemalloc/jemalloc-3.6.0.tar.bz2\ntar xjvf jemalloc-3.6.0.tar.bz2\ncd jemalloc-3.6.0\n./configure --prefix=$CMAKE_PREFIX_PATH\nmake\nsudo make install\ncd ..\n\ncd hhvm\ncmake .\nmake\n\n#cd ~/installer-files	\n#wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3059_amd64.deb\n\n# wget https://www.privateinternetaccess.com/installer/install_ubuntu.sh\n\nssh-keygen -t rsa -C \"pcm\"\n\nssh-keygen -t rsa -C \"pcm@github\"\n\necho \"\"\n\n\nsudo ufw default deny\nsudo ufw enable\n\nsudo hostname tronnet.me\n",
+			"file": "/home/pcm/tronnet-ubuntu-12.04-install.sh",
+			"file_size": 3607,
+			"file_write_time": 130534823604382488,
 			"settings":
 			{
-				"buffer_size": 325,
+				"buffer_size": 3490,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "api/modules/SchedAPI.php",
+			"file": "www/pages/signup/js/oplz.page.signup.js",
 			"settings":
 			{
-				"buffer_size": 2969,
+				"buffer_size": 4582,
 				"line_ending": "Unix"
 			}
 		}
@@ -121,6 +160,33 @@
 	},
 	"file_history":
 	[
+		"/var/www/ontrapalooza.com/www/pages/createPage.sh",
+		"/var/www/ontrapalooza.com/www/pages/login/templates/oplz.login.desktop.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/login/js/oplz.page.signup.js",
+		"/var/www/ontrapalooza.com/www/pages/myschedule/js/oplz.page.myschedule.js",
+		"/var/www/ontrapalooza.com/www/pages/login/js/oplz.page.signup.jse",
+		"/var/www/ontrapalooza.com/www/pages/login/js/oplz.page.login.js",
+		"/var/www/ontrapalooza.com/www/pages/basic/js/oplz.page.basic.js",
+		"/var/www/ontrapalooza.com/api/index.php",
+		"/var/www/ontrapalooza.com/www/pages/splash/templates/oplz.splash.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/event/templates/oplz.event.desktop.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/myschedule/templates/oplz.myschedule.desktop.tmpl",
+		"/var/www/ontrapalooza.com/api/modules/SchedAPI.php",
+		"/var/www/ontrapalooza.com/api/modules/OntrapaloozaAPI.php",
+		"/var/www/ontrapalooza.com/www/pages/myschedule/style/css/oplz.page.myschedule.aesthetic.css",
+		"/var/www/ontrapalooza.com/www/pages/basic/js/oplz.page.event.js",
+		"/var/www/ontrapalooza.com/www/pages/event/templates/oplz.myschedule.desktop.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/main/templates/oplz.main.desktop.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/basic/style/css/oplz.page.basic.aesthetic.all.css",
+		"/var/www/ontrapalooza.com/www/pages/myschedule/style/css/oplz.page.myschedule.layout.css",
+		"/var/www/ontrapalooza.com/www/pages/splash/js/oplz.page.splash.js",
+		"/var/www/ontrapalooza.com/www/pages/main/js/oplz.page.main.js",
+		"/var/www/ontrapalooza.com/www/pages/main/style/css/oplz.page.main.aesthetic.css",
+		"/var/www/ontrapalooza.com/www/pages/myschedule/templates/oplz.main.desktop.tmpl",
+		"/var/www/ontrapalooza.com/www/pages/splash/style/css/oplz.page.splash.aesthetic.css",
+		"/var/www/ontrapalooza.com/www/index.html",
+		"/var/www/ontrapalooza.com/www/pages/main/style/css/oplz.page.main.layout.desktop.css",
+		"/var/www/ontrapalooza.com/ontrapalooza.sublime-project"
 	],
 	"find":
 	{
@@ -139,6 +205,27 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"myschedul",
+			"splash",
+			"Splash",
+			"login",
+			"ontrapalooza.com",
+			"splash",
+			"Splash",
+			"					\n",
+			"main",
+			"var_dump",
+			"error_log",
+			";\n",
+			"attendees",
+			"events",
+			"speaker",
+			"speakers",
+			"events",
+			"ids",
+			"$_REQUEST",
+			"_GET",
+			"method",
 			"tab",
 			"function(",
 			"oplz.events",
@@ -185,6 +272,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"basic",
+			"Basic",
+			"event",
+			"Event",
+			"myschedule",
+			"attendee",
+			"attendees",
+			"$data",
+			"data",
 			"function (",
 			"tmplTagEndDeliminator",
 			"tmplTagCloseDeliminator",
@@ -212,31 +308,116 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/index.html",
+					"file": "www/app/js/oplz.app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1236,
+						"buffer_size": 15091,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1094,
-								1094
+								8204,
+								8204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5047.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/pages/event/js/oplz.page.event.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/pages/signup/templates/oplz.signup.desktop.tmpl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1583,
+								1583
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/pcm/base-ubuntu-12.04-install.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -246,149 +427,60 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "ontrapalooza.sublime-project",
+					"buffer": 4,
+					"file": "/home/pcm/tronnet-ubuntu-12.04-install.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 256,
+						"buffer_size": 3490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								160,
-								160
+								3351,
+								3351
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1581.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "www/pages/main/templates/oplz.main.desktop.tmpl",
+					"buffer": 5,
+					"file": "www/pages/signup/js/oplz.page.signup.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4805,
+						"buffer_size": 4582,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4570,
-								4570
+								1071,
+								1071
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 170.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/pages/main/style/css/oplz.page.main.aesthetic.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1453,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1404,
-								1404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 510.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/pages/main/style/css/oplz.page.main.layout.desktop.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								323,
-								323
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "api/modules/SchedAPI.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2969,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2073,
-								2073
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 3.0,
-						"translation.y": 1026.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -427,7 +519,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 94.0
+		"height": 54.0
 	},
 	"output.find_results":
 	{
@@ -449,11 +541,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/var/www/ontrapalooza.com/ontrapalooza.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
