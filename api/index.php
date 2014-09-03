@@ -41,6 +41,7 @@
 			$password = $data["password"];
 			if (isset($username) && isset($password) && method_exists($api, "GetAuthToken")){
 				$session_key = call_user_func(array($api, "GetAuthToken"), $username, $password);
+				error_log($session_key);
 				if ($session_key){
 					OntrapaloozaAPI::CreateAuthentiactedClientSession($username, $session_key);
 					OntrapaloozaAPI::Response(array("id" => session_id() ));
