@@ -42,7 +42,7 @@
 				) 
 			);
 
-			if ($response == "ERR: Bad login"){
+			if (substr($response, 0, 4) == "ERR:"){
 				return false;
 			}
 
