@@ -36,13 +36,17 @@
 		static public function GetAuthToken($username, $password){
 			self::SetUsername($username);
 
-			if (self::SetSessionKey(
-				self::_Request("/auth/login", array(
-						"username" => OntrapaloozaAPI::Sanitize($username), 
-						"password" => OntrapaloozaAPI::Sanitize($password)
-					) 
-				)
-			)){
+			$response = self::_Request("/auth/login", array(
+					"username" => OntrapaloozaAPI::Sanitize($username), 
+					"password" => OntrapaloozaAPI::Sanitize($password)
+				) 
+			);
+
+			if ($response == "ERR: Bad login"){
+				return false;
+			}
+
+			if (self::SetSessionKey($response)){
 				return self::$session_key;
 			}
 
