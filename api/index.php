@@ -41,10 +41,11 @@
 			$password = $data["password"];
 			if (isset($username) && isset($password) && method_exists($api, "GetAuthToken")){
 				$session_key = call_user_func(array($api, "GetAuthToken"), $username, $password);
-				error_log($session_key);
 				if ($session_key){
 					OntrapaloozaAPI::CreateAuthentiactedClientSession($username, $session_key);
 					OntrapaloozaAPI::Response(array("id" => session_id() ));
+				} else {
+					OntrapaloozaAPI::Response(array(), 5, "Username and password combination were not correct!");
 				}
 			} else {
 				OntrapaloozaAPI::Response(array(), 3, "Username or password were empty or this api has no authentication mechanisms!");
