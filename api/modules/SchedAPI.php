@@ -90,7 +90,8 @@
 
 		static public function GetSessionList($data = array()){
 			return json_decode(self::_Request("/session/export", array(
-				"format" => "json"
+				"format" => "json",
+				"custom_data" => "Y"
 			)), true);
 		}
 
