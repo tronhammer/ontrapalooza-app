@@ -7,6 +7,12 @@
 	header("Access-Control-Allow-Origin: " . rtrim($_SERVER["HTTP_REFERER"], "/"));
 	header("Access-Control-Allow-Credentials: true");
 
+	/**
+	 * Setup session to only expire after 7 days.
+	 */
+	ini_set("session.gc_maxlifetime", 604800);
+	ini_set("session.gc_probability", 1);
+
 	session_start();
 
 	function OntrapaloozaAPIAutoloader($className){
