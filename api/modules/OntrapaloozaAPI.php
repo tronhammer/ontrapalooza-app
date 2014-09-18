@@ -130,10 +130,23 @@
 				"usernames" => array()
 			);
 
-			foreach(array("attendee", "Workshop", "Keynote", "sponsor", "speaker", "exhibitor") as $role){
+			foreach(array("attendee", "sponsor", "speaker", "exhibitor") as $role){
 				$roles = SchedAPI::GetRoleList( array("role" => $role) );
 
 				foreach($roles as $user){
+					$users["all"][ $user["id"] ] = array_merge(
+						isset($users["all"][ $user["id"] ]) ? $users["all"][ $user["id"] ] : array(),
+						$user
+					);
+
+					$users["usernames"][ $user["username"] ] = $users[ $role . "s"][]= $user["id"];
+				}
+			}
+
+			foreach(array("Workshop", "Keynote") as $role){
+				$roles = SchedAPI::GetRoleList( array("role" => $role) );
+
+				foreach($roles["artist"] as $user){
 					$users["all"][ $user["id"] ] = array_merge(
 						isset($users["all"][ $user["id"] ]) ? $users["all"][ $user["id"] ] : array(),
 						$user
