@@ -130,7 +130,7 @@
 				"usernames" => array()
 			);
 
-			foreach(array("attendee", "sponsor", "speaker", "exhibitor") as $role){
+			foreach(array("attendee", "workshop", "keynote", "sponsor", "speaker", "exhibitor") as $role){
 				$roles = SchedAPI::GetRoleList( array("role" => $role) );
 
 				foreach($roles as $user){
