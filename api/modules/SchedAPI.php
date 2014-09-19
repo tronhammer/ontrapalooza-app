@@ -95,6 +95,13 @@
 			)), true);
 		}
 
+
+		static public function CreateUserAccount($data = array()){
+			return json_decode(self::_Request("/user/add", array(
+				"role" => "attendee"
+			)), true);
+		}
+
 		static public function GetGoingList($data = array()){
 			return json_decode(self::_Request("/going/all"), true);
 		}
