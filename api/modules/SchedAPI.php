@@ -7,7 +7,7 @@
 
 		static public $methods = array(
 			"get" => array("UserGetGoingList", "GetGoingList", "GetSessionList", "GetRoleList", "GetSessionKey", "GetActiveList"),
-			"post" => array("UserAddAttendingEvent", "UserRemoveAttendingEvent"),
+			"post" => array("UserAddAttendingEvent", "UserRemoveAttendingEvent", "CreateUserAccount"),
 			"authenticated" => array("GetSessionKey", "UserGetGoingList", "UserAddAttendingEvent", "UserRemoveAttendingEvent")
 		);
 
