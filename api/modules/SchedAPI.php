@@ -96,21 +96,21 @@
 		}
 
 
-		// static public function CreateUserAccount($data = array()){
-		// 	if  (!filter_var($data["email"], FILTER_VALIDATE_EMAIL)){
-		// 		return OntrapaloozaAPI::Response(array(), 7, "Not a valid email!");
-		// 	} else (empty($data["username"]) || empty($data["name"]) || empty($data["email"]) || empty($data["password"]) ) {
-		// 		return OntrapaloozaAPI::Response(array(), 7, "Fields must not be empty!");
-		// 	}
+		static public function CreateUserAccount($data = array()){
+			if  (!filter_var($data["email"], FILTER_VALIDATE_EMAIL)){
+				return OntrapaloozaAPI::Response(array(), 7, "Not a valid email!");
+			} else if (empty($data["username"]) || empty($data["name"]) || empty($data["email"]) || empty($data["password"]) ) {
+				return OntrapaloozaAPI::Response(array(), 7, "Fields must not be empty!");
+			}
 
-		// 	return json_decode(self::_Request("/user/add", array(
-		// 		"username" => $data["username"],
-		// 		"full_name" => $data["name"],
-		// 		"email" => $data["email"],
-		// 		"password" => $data["password"],
-		// 		"role" => "attendee"
-		// 	)), true);
-		// }
+			return json_decode(self::_Request("/user/add", array(
+				"username" => $data["username"],
+				"full_name" => $data["name"],
+				"email" => $data["email"],
+				"password" => $data["password"],
+				"role" => "attendee"
+			)), true);
+		}
 
 		static public function GetGoingList($data = array()){
 			return json_decode(self::_Request("/going/all"), true);
