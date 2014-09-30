@@ -162,7 +162,7 @@
 				$users["all"][ $users["usernames"][ $username ] ]["attending"] = $eventIDs;
 			}
 
-			file_put_contents("../www/cache/OntrapaloozaAPI.GetUsers.json", json_encode($users));
+			// file_put_contents("../www/cache/OntrapaloozaAPI.GetUsers.json", json_encode($users));
 
 			return $users;
 		}
@@ -182,7 +182,7 @@
 				$events["chron"][ strtolower($event["event_start_weekday"]) ][ $event["event_start_time"] ][] = $event["id"];
 			}
 
-			file_put_contents("../www/cache/OntrapaloozaAPI.GetEvents.json", json_encode($events));
+			// file_put_contents("../www/cache/OntrapaloozaAPI.GetEvents.json", json_encode($events));
 
 			return $events;
 		}

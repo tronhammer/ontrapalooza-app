@@ -62,9 +62,9 @@
 				"sessions" => $data["keys"]
 			)), true);
 
-			if (file_exists("../www/cache/OntrapaloozaAPI.GetUsers.json")){
-				unlink("../www/cache/OntrapaloozaAPI.GetUsers.json");
-			}
+			// if (file_exists("../www/cache/OntrapaloozaAPI.GetUsers.json")){
+			// 	unlink("../www/cache/OntrapaloozaAPI.GetUsers.json");
+			// }
 
 			return $response;
 		}
@@ -74,9 +74,9 @@
 				"sessions" => $data["keys"]
 			)), true);
 
-			if (file_exists("../www/cache/OntrapaloozaAPI.GetUsers.json")){
-				unlink("../www/cache/OntrapaloozaAPI.GetUsers.json");
-			}
+			// if (file_exists("../www/cache/OntrapaloozaAPI.GetUsers.json")){
+			// 	unlink("../www/cache/OntrapaloozaAPI.GetUsers.json");
+			// }
 			return $response;
 		}
 
