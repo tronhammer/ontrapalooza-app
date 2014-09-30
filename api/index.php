@@ -43,11 +43,10 @@
 		if (isset($data["fixture"])){
 			OntrapaloozaAPI::Response( OntrapaloozaAPI::GetFixture($api, $data["action"]));
 		} else if ($data["action"] === "login"){
-			$username = $data["username"];  #"tamara14", "TWeaver123");
+			$username = $data["username"];
 			$password = $data["password"];
 			if (isset($username) && isset($password) && method_exists($api, "GetAuthToken")){
 				$session_key = call_user_func(array($api, "GetAuthToken"), $username, $password);
-				error_log($session_key);
 				if ($session_key){
 					OntrapaloozaAPI::CreateAuthentiactedClientSession($username, $session_key);
 					OntrapaloozaAPI::Response(array("id" => session_id() ));
