@@ -167,6 +167,11 @@
 			curl_close($curl);
 
 			// var_dump($curl_response);
+			
+			if (substr($curl_response, 0, 4) == "ERR:"){
+				OntrapaloozaAPI::Response(array(), 20, substr($curl_response, 5));
+			}
+
 
 			return $curl_response;
 		}
