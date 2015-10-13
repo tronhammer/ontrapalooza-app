@@ -155,7 +155,10 @@
 			// 		$users["usernames"][ $user["username"] ] = $users[ $role . "s"][]= $user["id"];
 			// 	}
 			// }
-
+			
+			var_dump(array_keys($users));
+			die();
+			
 			$going = SchedAPI::GetGoingList();
 
 			foreach($going as $username=>$eventIDs){
