@@ -156,8 +156,8 @@
 			// 	}
 			// }
 			
-			var_dump(array_keys($users));
-			die();
+			// var_dump(array_keys($users));
+			// die();
 			
 			$going = SchedAPI::GetGoingList();
 
