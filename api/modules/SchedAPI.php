@@ -14,11 +14,13 @@
 		static private $_roles = array("attendee", "speaker", "artist", "sponsor", "exhibitor", "staff");
 
 		static private $_api_keys = array(
-			"1.0" => "4b95663904821ee688263d0c1f9d9d6f"
+			// "1.0" => "4b95663904821ee688263d0c1f9d9d6f"
+			"1.0" => "e0b531cdc80bf1689eedcbe5ceed15a5"
 		);
 
 		static private $_api_uris = array(
-			"1.0" => "http://ontrapalooza2014a.sched.org/api"
+			// "1.0" => "http://ontrapalooza2014a.sched.org/api"
+			"1.0" => "http://ontrapalooza2015.sched.org/api"
 		);
 
 		static public function SetAPIVersion($version){
