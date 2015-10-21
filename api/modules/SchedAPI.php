@@ -39,7 +39,7 @@
 			self::SetUsername($username);
 
 			$response = self::_Request("/auth/login", array(
-					"username" => OntrapaloozaAPI::Sanitize(strtolower($username)), 
+					"username" => OntrapaloozaAPI::Sanitize($username), 
 					"password" => OntrapaloozaAPI::Sanitize($password)
 				) 
 			);
